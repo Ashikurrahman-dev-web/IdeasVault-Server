@@ -61,7 +61,7 @@ app.get("/featuredIdeas", async (req, res) => {
 app.get("/myIdeas",verifyToken, async (req, res) => {
   const result = await ideasCollection
     .find()
-    .skip(2)
+    .skip(6)
     .toArray();
 
   res.json(result);
